@@ -1,0 +1,232 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+  
+  /* Container for main content */
+  h1 {
+    font-size: 2.5rem;
+    color: #ce0505;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Input area styling */
+  #inputSection {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  #item {
+    padding: 10px;
+    width: calc(100% - 20px);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* List and Item Styling */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 5px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  li:hover {
+    transform: translateY(-3px);
+  }
+  
+  span.quantity {
+    font-weight: bold;
+    color: #4a98eb;
+    margin-left: 10px;
+  }
+  
+  button {
+    background-color: #28a745;
+    padding: 6px 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #402188;
+  }
+  
+  button:disabled {
+    background-color: #ddd;
+  }
+  
+  /* Last Update Section */
+  #lastUpdated {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  #logoutButton {
+    background-color: #dc3545;
+    margin-top: 20px;
+  }
+  
+  #logoutButton:hover {
+    background-color: #c82333;
+  }
+  
+  button.remove {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button.remove:hover {
+    background-color: darkred;
+}
+button.remove {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button.remove:hover {
+    background-color: darkred;
+}
+
+  /* Media Queries for responsiveness */
+  
+  /* For screens larger than 600px (tablets and small laptops) */
+  @media screen and (min-width: 600px) {
+    h1 {
+      font-size: 3rem;
+    }
+  
+    #inputSection {
+      width: 80%;
+      max-width: 500px;
+    }
+  
+    ul {
+      width: 80%;
+      max-width: 500px;
+    }
+  }
+  
+  /* For screens larger than 768px (tablets and small desktops) */
+  @media screen and (min-width: 768px) {
+    h1 {
+      font-size: 3.5rem;
+    }
+  
+    #inputSection {
+      width: 60%;
+      max-width: 600px;
+    }
+  
+    ul {
+      width: 60%;
+      max-width: 600px;
+    }
+  }
+  
+  /* For screens smaller than 600px (smartphones) */
+  @media screen and (max-width: 600px) {
+    body {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    #inputSection {
+      width: 100%;
+      max-width: 100%;
+      padding: 15px;
+    }
+  
+    #item {
+      font-size: 1rem;
+    }
+  
+    button {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+      margin: 20px;;
+    }
+  
+    li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    span.quantity {
+      margin-left: 0;
+      margin-top: 5px;
+    }
+  
+    #lastUpdated {
+      font-size: 0.9rem;
+    }
+  }
+  .hidden {
+    display: none;
+  }
+  

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aladdin Inventory</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <h1>Aladdin Skylights</h1>
+
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter your name">
+        <button id="loginButton">Login</button>
+    </div>
+
+    <div>
+        <button id="logoutButton" style="display: none;">Logout</button>
+    </div>
+
+    <div id="inputSection" style="display: none;">
+        <label for="item">Enter a new item:</label>
+        <input type="text" id="item">
+        <button id="addButton">Add item</button>
+    </div>
+
+    <ul id="itemList"></ul>
+
+    <footer id="footer">
+        <p id="lastUpdated">Last updated: never</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
