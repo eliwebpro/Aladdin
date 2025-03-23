@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="styles/style.css">
+
+
+
+  <title>Estoque de Itens</title>
+</head>
+<body>
+  <img src="images/aladdin-logo.png" loading="lazy" alt="Aladdin">
+
+  <h1>Stock Items</h1>
+
+  <div class="form-container">
+    <label for="nomeInput">Search by name:</label>
+    <input type="text" id="nomeInput" placeholder="Ex: TMR">
+    <p class="timestamp" id="timestamp-xyz123">Last updated: 3/23/2025, 14:23:01</p>
+
+  </div>
+  
+  <!-- Adicione este container aqui -->
+  <div id="lista-container"></div>
+  
+
+
+<h2>Add New Item</h2>
+
+
+<form id="formAdicionar">
+  <label for="tipo">Type:</label>
+  <select id="tipo" required>
+    <option value="">-- Select Type --</option>
+    <option value="Sun Tunnels">Sun Tunnels</option>
+    <option value="Curb Mount">Curb Mount</option>
+    <option value="Acrylic Dome">Acrylic Dome</option>
+    <option value="Curb-mount Flashing">Curb-mount Flashing</option>
+    <option value="Deck Mount">Deck Mount</option>
+    <option value="Deck-mount Flashing">Deck-mount Flashing</option>
+    <option value="Self-Flashed">Self-Flashed</option>
+  </select>
+
+  <label for="nome">Name:</label>
+  <input type="text" id="nome" required>
+
+  <label for="quantidade">Qtd:</label>
+  <input type="number" id="quantidade" required>
+
+  <button type="submit">Add</button>
+  <p class="timestamp" id="timestamp-xyz123">Last updated: 3/23/2025, 14:23:01</p>
+</form>
+
+
+<div id="mensagem"></div>
+
+<h2>Delete</h2>
+
+<div class="form-container">
+  <label for="nomeDelete">Search to Delete:</label>
+  <input type="text" id="nomeDelete" placeholder="Ex: TMF">
+  <p class="timestamp" id="timestamp-xyz123">Last updated: 3/23/2025, 14:23:01</p>
+</div>
+
+<!-- Aqui é onde os cartões a serem deletados serão exibidos -->
+
+
+<div id="delete-container"></div>
+
+<footer>
+  <p>&copy; <span id="currentyear"></span> Alladin | Utah, USA</p>
+  <p id="lastModified">Last Modified: </p> 
+</footer>
+
+<script>
+  document.getElementById("currentyear").textContent = new Date().getFullYear();
+  document.getElementById("lastModified").textContent += document.lastModified;
+
+</script>
+<script type="module" src="scripts/timestamp.js"></script>
+<script type="module" src="scripts/get.js"></script>
+<script type="module" src="scripts/put.js"></script>
+<script type="module" src="scripts/delete.js"></script>
+<script type="module" src="scripts/post.js"></script>
+
+
+</body>
+</html>
