@@ -1,180 +1,371 @@
-/* ===== RESET & BASE ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    width: 100%;
-    max-width: 100vw;
-    overflow-x: hidden;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  /* ===== HEADINGS ===== */
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  h2 {
-    font-size: 1.4rem;
-    margin: 2rem 0 1rem;
-  }
-  
-  /* ===== FORM STYLES ===== */
-  form {
-    margin: 1rem auto 2rem;
-    max-width: 400px;
-    background: #fff;
-    padding: 1.2rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  }
-  
-  label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 0.4rem;
-    text-align: left;
-  }
-  
-  input, select {
-    width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-  }
-  
-  /* ===== BUTTONS ===== */
-  button {
-    width: 100%;
-    padding: 0.8rem;
-    background-color: #3b82f6;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.2s;
-  }
-  
-  button:hover {
-    background-color: #2563eb;
-  }
-  
-  .delete-btn {
-    background-color: #ef4444;
-  }
-  
-  .delete-btn:hover {
-    background-color: #dc2626;
-  }
-  
-  /* ===== CARDS ===== */
-  #lista-container,
-  #delete-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    align-items: center;
-    margin-top: 1rem;
-  }
-  
-  .card {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    padding: 1.2rem;
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-    transition: transform 0.2s ease;
-  }
-  
-  .card:hover {
-    transform: scale(1.02);
-  }
-  
-  .card h3 {
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-  }
-  
-  .card p {
-    margin: 0.3rem 0;
-  }
-  
-  /* ===== QUANTITY BUTTONS ===== */
-  .botoes {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  
-  .botoes button {
-    flex: 1;
-    padding: 0.6rem;
-  }
-  
-  /* ===== STATUS MESSAGE ===== */
-  #mensagem {
-    margin-top: 1rem;
-    font-weight: bold;
-    color: green;
-  }
-  .form-container {
-    max-width: 400px;
-    margin: 0 auto 2rem auto;
-    padding: 1rem;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  }
-  footer {
-    background: #013a63;
-    color: white;
-    padding: 15px;
-    margin-top: 20px;
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
+/* IMAGEM */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 30px auto 1rem auto;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+/* NAV */
+nav {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav .link {
+  text-decoration: underline;
+  color: #fff;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  background-color: #013a63;
+  font-size: 3rem;
+}
+
+nav .link:hover {
+  background-color: #2563eb;
+  color: #fff;
+}
+/* ===== HEADINGS ===== */
+h1 {
+  margin-top: 20px;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+}
+.add{
+  background-color: #3b82f6;
+  color: white;}
+  
+.delete {
+  background-color: #ee6565;
+}
+
+/* ===== FORM STYLES ===== */
+form {
+  width: 100%;  
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  font-size: 2rem;
+
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  text-align: center;
+  font-size: 2rem;
+
+}
+
+select {
+  width: 100%;
+  padding: 3rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #000;
+  font-size: 1.8rem;
+}
+
+input {
+  width: 100%;
+  padding: 2.rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #000;
+  font-size: 5rem;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  width: 100%;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 4rem;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #2563eb;
+  
+}
+
+.delete-btn {
+  background-color: #ee6565;
+}
+
+.delete-btn:hover {
+transform: scale(1.03);}
+
+
+/* ===== CARDS ===== */
+#lista-container,
+#delete-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+  margin-top: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 1.2rem;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.card p {
+  margin: 0.3rem 0;
+}
+
+/* ===== QUANTITY BUTTONS ===== */
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.botoes button {
+  flex: 1;
+  padding: 0.6rem;
+}
+
+/* ===== STATUS MESSAGE ===== */
+#mensagem {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: green;
+}
+
+/* FORM CONTAINER */
+.form-container {
+  width: 100%;
+  margin: 10px;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* FOOTER */
+footer {
+  background: #013a63;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
 .timestamp {
   font-size: 0.75rem;
   color: #666;
   margin-top: 0.5rem;
 }
 
+/* ===== FILTERS ===== */
+
+.filters label {
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+#filtro-tipos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+
+#filtro-tipos label {
+  display: grid;
+  align-items: center;
+  background-color: #c5ccdb;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
   
-  /* ===== MOBILE FIX ===== */
-  @media (max-width: 480px) {
-    h1 {
-      font-size: 3.6rem;
-    }
-  
-    h2 {
-      font-size: 3.2rem;
-    }
-  
-    input, select, button {
-        display: flex;
-      font-size: 0.95rem;
-      width: 100%;
-    }
-  
-    .card h3 {
-      font-size: 1rem;
-    }
-  
-    .card {
-      padding: 1rem;
-    }
+}
+
+#filtro-tipos input[type="checkbox"] {
+  display: none;
+}
+
+#filtro-tipos input[type="checkbox"]:checked + span {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #2563eb;
+}
+
+#filtro-tipos label span {
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  transition: 0.3s;
+}
+
+#btnLimparFiltros {
+  margin: 1rem auto;
+  display: block;
+  background-color: #ee6565;
+  color: #000;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  max-width: 400px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#btnLimparFiltros:hover {
+  transform: scale(1.03);
+}
+/* Container opcional, se tiver */
+#nomeInput {
+  font-size: 4rem;
+  padding: 1rem;
+  border: 2px solid #333;
+  border-radius: 12px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+label[for="nomeInput"] {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+  text-align: center;
+}
+.form-container {
+  background-color: #f4f4f4;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;  
+  margin: 2rem auto;
+}
+
+
+/* ===== RESPONSIVO (TELAS PEQUENAS) ===== */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
-  
+
+  h2 {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.8rem;
+  }
+
+  .form-container,
+  form {
+    width: 100%;
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  input,
+  select,
+  button {
+    font-size: 0.9rem;
+  }
+
+  .filters {
+    padding: 0.5rem;
+  }
+
+  #filtro-tipos {
+    gap: 0.4rem;
+  }
+
+  #filtro-tipos label {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .card {
+    padding: 0.8rem;
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .botoes button {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .timestamp {
+    font-size: 0.65rem;
+  }
+
+  #btnLimparFiltros {
+    width: 90%;
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+}
