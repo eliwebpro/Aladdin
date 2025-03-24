@@ -57,7 +57,7 @@ h2 {
 
 }
 .add{
-  background-color: #3b82f6;
+  background-color: #425e8b;
   color: white;}
   
 .delete {
@@ -104,11 +104,11 @@ input {
 /* ===== BUTTONS ===== */
 button {
   width: 100%;
-  background-color: #3b82f6;
+  background-color: #3d7450;
   color: white;
   border: none;
   border-radius: 8px;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bolder;
   cursor: pointer;
   transition: 0.2s;
@@ -235,7 +235,7 @@ footer {
   padding: 0.5rem 1rem;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 2rem;
   transition: background-color 0.3s ease;
   border: 2px solid transparent;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -267,7 +267,7 @@ footer {
   padding: 0.6rem 1.2rem;
   border: none;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 3rem;
   cursor: pointer;
   transition: background-color 0.2s ease;
   max-width: 400px;
@@ -285,7 +285,7 @@ footer {
   padding: 1rem;
   border: 2px solid #333;
   border-radius: 12px;
-  width: 100%;
+  max-width: 400px;
   margin: 0 auto;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
