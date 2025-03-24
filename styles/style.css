@@ -148,6 +148,8 @@ transform: scale(1.03);}
   width: 100%;
   text-align: center;
   transition: transform 0.2s ease;
+  font-size: 4rem;
+  font-weight: bold;
 }
 
 .card:hover {
@@ -155,8 +157,9 @@ transform: scale(1.03);}
 }
 
 .card h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 5rem;
+  color: #013a63;
+  margin-top: 10px;
 }
 
 .card p {
